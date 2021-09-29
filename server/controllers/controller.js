@@ -1,6 +1,18 @@
-const express = require('express');
 
-const getPhoneWords = (digits) => {
+// alphabet hash map
+const alphabet = {
+  '2': 'abc',
+  '3': 'def',
+  '4': 'ghi',
+  '5': 'jkl',
+  '6': 'mno',
+  '7': 'pqrs',
+  '8': 'tuv',
+  '9': 'wxyz',
+};
+
+
+const numToWord = (digits) => {
 
   if (digits.length === 0) {
     return [];
@@ -8,17 +20,6 @@ const getPhoneWords = (digits) => {
 
   const result = [];
 
-  // alphabet hash map
-  const alphabet = {
-    '2': 'abc',
-    '3': 'def',
-    '4': 'ghi',
-    '5': 'jkl',
-    '6': 'mno',
-    '7': 'pqrs',
-    '8': 'tuv',
-    '9': 'wxyz',
-  };
 
   // depth first search recursive helper
   const dfs = (i, digits, slate) => {
@@ -32,7 +33,7 @@ const getPhoneWords = (digits) => {
     // create alpha hash map where numbers will map letter - abc, def, etc.
     let chars = alphabet[digits[i]];
 
-    for (let char of chars) {
+    for (const char in chars) {
       slate.push(char);
       dfs(i + 1, digits, slate);
       slate.pop();
@@ -45,5 +46,22 @@ const getPhoneWords = (digits) => {
   return result;
 
 }
+
+
+const getPhoneWords = async (req, res) => {
+  console.log('before try');
+  try {
+    const params = req.query;
+    const phoneWords = await numToWord(params);
+    console.log(phoneWords);
+    //const { phoneWords } = await numToWord(req.params.number);
+    //console.log(phoneWords);
+    res.status(201).send(phoneWords); // or 200?
+  } catch (err) {
+    console.log(err)
+    res.status(400).send('unable to retrieve letters')
+  }
+}
+
 
 module.exports = { getPhoneWords };
