@@ -1,0 +1,14 @@
+.key-number {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: auto;
+  height: 60px;
+  cursor: pointer;
+  font-size: 1.5rem;
+  background-color: #e8e8e8;
+}
+
+.key-number :hover {
+  background-color: #f4f4f2;
+}
