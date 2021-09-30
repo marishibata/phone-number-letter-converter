@@ -5,11 +5,9 @@ import {
 } from 'react';
 import './App.css';
 
-import {
-  IonClick,
-} from './types';
 
 import {
+  InputField,
   Keyboard,
 } from './components/';
 
@@ -21,6 +19,7 @@ const App: FC = () => {
       </div>
       <div className="app-container">
         app-container.css
+        <InputField />
         <Keyboard />
       </div>
     </div>
