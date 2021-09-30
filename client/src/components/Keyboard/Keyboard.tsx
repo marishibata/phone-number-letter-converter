@@ -1,23 +1,10 @@
 import '../Keyboard/Keyboard.css';
 
 import {
-  useState,
-  Dispatch,
-  SetStateAction,
   FC,
 } from 'react';
 
-import {
-  IonClick,
-} from '../../types';
-
-// interface KeyboardProps {
-//   onClick: IonClick;
-// }
-
 const Keyboard: FC<{ onClick?: React.MouseEventHandler<HTMLElement> }> = ({ onClick }) => {
-
-  const [active, setIsActive] = useState(false);
 
   return (
     <div className="keyboard-container">
