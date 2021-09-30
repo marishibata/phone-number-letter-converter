@@ -23,7 +23,7 @@
 }
   
 
-.key-number {
+.keypad-number {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -31,9 +31,10 @@
   height: 60px;
   cursor: pointer;
   font-size: 1.5rem;
-  background-color: #e8e8e8;
+  color: #FFBA84;
+  background-color: #B481BB;
 }
 
-.key-number :hover {
+.keypad-number :hover {
   background-color: #f4f4f2;
 }
