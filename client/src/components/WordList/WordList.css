@@ -1,0 +1,13 @@
+.wordlist-container {
+  width: 80%;
+  margin: 2rem 0;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.wordlist-list-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}

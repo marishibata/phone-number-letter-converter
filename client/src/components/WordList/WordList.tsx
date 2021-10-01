@@ -1,5 +1,7 @@
 import WordListItem from "../WordListItem/WordListItem";
 
+import { useSelector } from "react-redux";
+
 import {
   FC,
 } from 'react';
@@ -9,11 +11,15 @@ interface WordListProps {
 }
 
 const WordList: FC<WordListProps> = ({ number }) => {
-  return (
-    <div>
-      <h2>List of words for number: {number}</h2>
-      <WordListItem key={index} item={item} />
 
+  const wordList = useSelector(state => state.lettersData);
+
+  return (
+    <div className="wordlist-container">
+      <h2>List of words for number: {number}</h2>
+      {wordList.map((item: any, index: any) => (
+        <WordListItem key={index} item={item} />
+      ))}
     </div>
   )
 }
