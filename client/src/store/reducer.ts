@@ -6,7 +6,7 @@ const initalPhonewordState = {
   errorMessage: undefined
 }
 
-export const phoneWordsReducer = (state = initalPhonewordState, action) => {
+export const phoneWordsReducer = (state = initalPhonewordState, action: any) => {
   switch (action.type) {
     case PhoneWordsActionTypes.FETCH_PHONEWORDS_START:
       return {

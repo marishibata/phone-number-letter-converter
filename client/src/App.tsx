@@ -1,14 +1,14 @@
-import React from 'react';
 import {
   FC,
   useState,
 } from 'react';
-import './App.css';
 
+import './App.css';
 
 import {
   InputField,
   Keyboard,
+  WordList,
 } from './components/';
 
 const App: FC = () => {
