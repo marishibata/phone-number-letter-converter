@@ -4,7 +4,11 @@ import {
   FC,
 } from 'react';
 
-const Keyboard: FC<{ onClick?: React.MouseEventHandler<HTMLElement> }> = ({ onClick }) => {
+interface KeyboardProps {
+  onClick?: React.MouseEventHandler<HTMLElement>
+}
+
+const Keyboard: FC<KeyboardProps> = ({ onClick }) => {
 
   return (
     <div className="keyboard-container">

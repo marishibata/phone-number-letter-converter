@@ -12,6 +12,7 @@ import {
   InputField,
   Keyboard,
   WordList,
+  Button,
 } from './components/';
 
 import { clearPhoneWords, fetchPhoneWordsAsync } from './store/actions';
@@ -35,7 +36,7 @@ const App: FC = () => {
   const handleClear = () => {
     setInputTerm('');
     setNumber('');
-    dispatch(clearPhoneWords);
+    dispatch(clearPhoneWords());
   }
 
   return (
@@ -48,11 +49,21 @@ const App: FC = () => {
         <InputField
           value={inputTerm}
           placeholder='Enter digits'
-          onChange={event => setInputTerm([event.target.value].join(''))}
+          onChange={(event: any) => setInputTerm([event.target.value].join(''))}
         />
         <Keyboard onClick={handleClick} />
-        <WordList number={number}
+        <Button
+          onClick={handleSubmit}
+          text="Submit"
+          color="#00896C"
+        />
+        <Button
+          onClick={handleClear}
+          text="Clear"
+          color="#B19663"
+        />
       </div>
+      <WordList number={number} />
     </div>
   );
 }

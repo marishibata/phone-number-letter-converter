@@ -18,7 +18,7 @@ export const clearPhoneWords = () => ({
   type: PhoneWordsActionTypes.CLEAR_PHONEWORDS
 });
 
-export const fetchPhoneWordsAsync = (number: number) => {
+export const fetchPhoneWordsAsync = (number: string) => {
 
   const url = `http://localhost:5000/${number}`
 
