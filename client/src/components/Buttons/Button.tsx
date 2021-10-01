@@ -4,13 +4,14 @@ import "../Buttons/Buttons.css";
 
 interface ButtonProps {
   button: any,
-  onClick?: React.MouseEventHandler<HTMLElement>
+  onClick?: React.MouseEventHandler<HTMLElement>,
+  color: string,
 }
 
-const Button: FC<ButtonProps> = ({ button, onClick }) => {
+const Button: FC<ButtonProps> = ({ button, onClick, color }) => {
 
   return (
-    <div className="button" onClick={onClick}>{button}</div>
+    <div className="button" onClick={onClick} color={color}>{button}</div>
   )
 
 }

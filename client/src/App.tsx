@@ -1,7 +1,6 @@
 import {
   FC,
   useState,
-  ChangeEvent,
 } from 'react';
 
 import { useDispatch } from 'react-redux';
@@ -29,7 +28,7 @@ const App: FC = () => {
     setInputTerm('');
   }
 
-  const handleClick = (event: ChangeEvent<HTMLInputElement>) => {
+  const handleClick = (event: any) => {
     setInputTerm([...inputTerm, event.target.innerText].join(''))
   }
 
@@ -53,15 +52,19 @@ const App: FC = () => {
         />
         <Keyboard onClick={handleClick} />
         <Button
+          button={Button}
           onClick={handleSubmit}
-          text="Submit"
           color="#00896C"
-        />
+        >
+          Submit
+        </Button>
         <Button
+          button={Button}
           onClick={handleClear}
-          text="Clear"
           color="#B19663"
-        />
+        >
+          Clear
+        </Button>
       </div>
       <WordList number={number} />
     </div>
