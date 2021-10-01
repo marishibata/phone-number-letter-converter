@@ -8,10 +8,10 @@ import { useDispatch } from 'react-redux';
 import './App.css';
 
 import {
-  InputField,
   Keyboard,
   WordList,
   Button,
+  InputField,
 } from './components/';
 
 import { clearPhoneWords, fetchPhoneWordsAsync } from './store/actions';

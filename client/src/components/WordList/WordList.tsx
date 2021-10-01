@@ -1,6 +1,6 @@
 import WordListItem from "../WordListItem/WordListItem";
 
-import { useSelector } from "react-redux";
+import { useSelector, RootStateOrAny } from "react-redux";
 
 import {
   FC,
@@ -12,7 +12,7 @@ interface WordListProps {
 
 const WordList: FC<WordListProps> = ({ number }) => {
 
-  const wordList = useSelector(state => state.lettersData);
+  const wordList = useSelector((state: RootStateOrAny) => state.lettersData);
 
   return (
     <div className="wordlist-container">

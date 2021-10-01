@@ -1,6 +1,6 @@
 import { FC } from "react";
 
-import "../Buttons/Buttons.css";
+import "../Buttons/Button.css";
 
 interface ButtonProps {
   button: any,

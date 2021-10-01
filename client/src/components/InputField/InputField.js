@@ -1,24 +1,12 @@
-import {
-  FC,
-  InputHTMLAttributes,
-  KeyboardEvent,
-} from 'react';
+import "./InputField.css";
 
-import "../InputField/InputField.css";
-
-interface InputFieldProps extends InputHTMLAttributes<HTMLInputElement> {
-  value: any;
-  placeholder: string;
-  onChange: any;
-}
-
-const InputField: FC<InputFieldProps> = ({
+const InputField2 = ({
   value,
   placeholder,
   onChange,
 }) => {
 
-  const handleKeyPress = (event: KeyboardEvent) => {
+  const handleKeyPress = (event) => {
     const charAllowed = new RegExp('^[2-9]+$')
     if (!charAllowed.test(event.key)) {
       event.preventDefault()
@@ -42,4 +30,4 @@ const InputField: FC<InputFieldProps> = ({
 
 }
 
-export default InputField;
+export default InputField2;
