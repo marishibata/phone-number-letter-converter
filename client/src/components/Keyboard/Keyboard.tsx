@@ -2,6 +2,7 @@ import '../Keyboard/Keyboard.css';
 
 import {
   FC,
+  useState,
 } from 'react';
 
 interface KeyboardProps {
@@ -10,10 +11,12 @@ interface KeyboardProps {
 
 const Keyboard: FC<KeyboardProps> = ({ onClick }) => {
 
+  const [active, setActive] = useState(false);
+
   return (
-    <div className="keyboard-container">
-      <h2>Keyboard component</h2>
-      <div className="keypad-container">
+    <div>
+      <h3>Select Number</h3>
+      <div className="keypad-container" >
         <div className="keypad-number" onClick={onClick}>1</div>
         <div className="keypad-number" onClick={onClick}>2</div>
         <div className="keypad-number" onClick={onClick}>3</div>

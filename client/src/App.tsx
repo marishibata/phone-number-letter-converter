@@ -44,13 +44,12 @@ const App: FC = () => {
         Phonewords Converter
       </div>
       <div className="app-container">
-        app-container.css
+        <Keyboard onClick={handleClick} />
         <InputField
           value={inputTerm}
           placeholder='Enter digits'
           onChange={(event: any) => setInputTerm([event.target.value].join(''))}
         />
-        <Keyboard onClick={handleClick} />
         <Button
           button={Button}
           onClick={handleSubmit}
