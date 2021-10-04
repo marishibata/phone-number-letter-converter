@@ -1,17 +1,48 @@
 import { FC } from "react";
+import styled, { css } from 'styled-components';
 
-import "../Buttons/Button.css";
+const buttonDisabled = css`
+  opacity: 0.7;
+  cursor: not-allowed;
+`
 
-interface ButtonProps {
-  button: any,
-  onClick?: React.MouseEventHandler<HTMLElement>,
-  color: string,
+const getButtonStyles = (props: any) => {
+  if (props.disabled) return buttonDisabled;
 }
 
-const Button: FC<ButtonProps> = ({ button, onClick, color }) => {
+const Container = styled.button`
+  min-width: 85px;
+  width: auto;
+  background-color: #000000;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 1rem;
+  font-weight: 600;
+  height: 50px;
+  padding: 0 1rem;
+  text-align: center;
+  border: none;
+  outline: none;
+  margin: 1rem;
+
+  ${getButtonStyles}
+
+  @media screen and (max-width: 600px) {
+    height: 45px;
+  }
+`
+
+interface ButtonProps {
+  children: any,
+  onClick?: React.MouseEventHandler<HTMLElement>,
+}
+
+const Button: FC<ButtonProps> = ({ children, onClick }) => {
 
   return (
-    <div className="button" onClick={onClick} color={color}>{button}</div>
+    <Container onClick={onClick}>
+      {children}
+    </Container>
   )
 
 }

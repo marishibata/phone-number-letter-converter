@@ -38,8 +38,8 @@ const InputField: FC<InputFieldProps> = ({
 }) => {
 
   const handleKeyPress = (event: KeyboardEvent) => {
-    const charAllowed = new RegExp('^[2-9]+$')
-    if (!charAllowed.test(event.key)) {
+    const charsAllowed = new RegExp('^[2-9]+$')
+    if (!charsAllowed.test(event.key)) {
       event.preventDefault()
     }
   }

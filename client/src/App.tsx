@@ -16,6 +16,14 @@ import {
 
 import { clearPhoneWords, fetchPhoneWordsAsync } from './store/actions';
 
+import styled from 'styled-components';
+
+
+const ButtonsContainer = styled.div`
+  display: flex;
+  flex-direction: row;
+`
+
 const App: FC = () => {
 
   const [number, setNumber] = useState('');
@@ -47,23 +55,21 @@ const App: FC = () => {
         <Keyboard onClick={handleClick} />
         <InputField
           value={inputTerm}
-          placeholder='Enter digits'
+          placeholder='Displays numbers selected'
           onChange={(event: any) => setInputTerm([event.target.value].join(''))}
         />
-        <Button
-          button={Button}
-          onClick={handleSubmit}
-          color="#00896C"
-        >
-          Submit
-        </Button>
-        <Button
-          button={Button}
-          onClick={handleClear}
-          color="#B19663"
-        >
-          Clear
-        </Button>
+        <ButtonsContainer>
+          <Button
+            onClick={handleSubmit}
+          >
+            Submit
+          </Button>
+          <Button
+            onClick={handleClear}
+          >
+            Clear
+          </Button>
+        </ButtonsContainer>
       </div>
       <WordList number={number} />
     </div>

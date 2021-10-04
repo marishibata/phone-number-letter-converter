@@ -20,7 +20,7 @@ export const clearPhoneWords = () => ({
 
 export const fetchPhoneWordsAsync = (number: string) => {
 
-  const url = `http://localhost:5000/${number}`
+  const url = `http://localhost:5000/number/${number}`
 
   return async (dispatch: any) => {
     dispatch(fetchPhoneWordsStart());

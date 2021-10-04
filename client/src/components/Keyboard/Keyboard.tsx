@@ -11,11 +11,9 @@ interface KeyboardProps {
 
 const Keyboard: FC<KeyboardProps> = ({ onClick }) => {
 
-  const [active, setActive] = useState(false);
-
   return (
     <div>
-      <h3>Select Number</h3>
+      <h3>Click to select numbers</h3>
       <div className="keypad-container" >
         <div className="keypad-number" onClick={onClick}>1</div>
         <div className="keypad-number" onClick={onClick}>2</div>
