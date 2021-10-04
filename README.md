@@ -25,7 +25,7 @@ Full-stack application that converts a given numeric string into a list of corre
 Clone this repo:
 
 ```
-git clone 
+git clone https://github.com/marishibata/phone-number-letter-converter.git
 ```
 
 Navigate into project directory:
