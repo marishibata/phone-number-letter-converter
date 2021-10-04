@@ -15,6 +15,7 @@ Full-stack application that converts a given numeric string into a list of corre
 
 - TypeScript
 - React
+- Redux
 - CSS
 - Styled Components
 - Node.js
