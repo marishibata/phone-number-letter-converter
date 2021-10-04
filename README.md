@@ -1,4 +1,4 @@
-# Letter-to number-converter (phonewords)
+# Letter-to-number converter (phonewords)
 
 Full-stack application that converts a given numeric string into a list of corresponding words in the style of Phonewords (https://en.wikipedia.org/wiki/Phoneword). 
 
