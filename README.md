@@ -58,6 +58,7 @@ node server.js
 Open another terminal and navigate to the front-end:
 
 ```
+cd ..
 cd client
 ```
 
