@@ -23,13 +23,9 @@ const Container = styled.button`
   text-align: center;
   border: none;
   outline: none;
-  margin: 1rem;
+  margin: 2rem;
 
   ${getButtonStyles}
-
-  @media screen and (max-width: 600px) {
-    height: 45px;
-  }
 `
 
 interface ButtonProps {

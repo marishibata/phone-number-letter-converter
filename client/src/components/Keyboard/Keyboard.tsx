@@ -13,7 +13,7 @@ const Keyboard: FC<KeyboardProps> = ({ onClick }) => {
 
   return (
     <div>
-      <h3>Click to select numbers</h3>
+      <h2 className="h2">Click to select numbers</h2>
       <div className="keypad-container" >
         <div className="keypad-number" onClick={onClick}>1</div>
         <div className="keypad-number" onClick={onClick}>2</div>

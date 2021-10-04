@@ -51,7 +51,7 @@ const App: FC = () => {
       <div className="header-text">
         Phonewords Converter
       </div>
-      <div className="app-container">
+      <div>
         <Keyboard onClick={handleClick} />
         <InputField
           value={inputTerm}

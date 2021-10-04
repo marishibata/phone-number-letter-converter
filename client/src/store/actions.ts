@@ -30,13 +30,11 @@ export const fetchPhoneWordsAsync = (number: string) => {
     const data = await response.json();
     console.log('data', data);
 
-    const { success, error, phonewords } = data;
-    // no rpoperty called phonewords
+    const { success, error } = data;
 
     if (!success) {
       dispatch(fetchPhoneWordsFailure(error))
     }
-    console.log('phonewords', phonewords, data, 'data');
     dispatch(fetchPhoneWordsSuccess(data));
   }
 };
