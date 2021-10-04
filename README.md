@@ -31,7 +31,7 @@ git clone https://github.com/marishibata/phone-number-letter-converter.git
 Navigate into project directory:
 
 ```
-cd form-validation
+cd phone-number-letter-converter
 ```
 
 
