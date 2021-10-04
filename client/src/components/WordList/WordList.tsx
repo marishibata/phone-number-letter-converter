@@ -29,13 +29,14 @@ interface WordListProps {
 const WordList: FC<WordListProps> = ({ number }) => {
 
   const wordList = useSelector((state: RootStateOrAny) => state.lettersData);
+  console.log('wordList', wordList)
 
   return (
     <div>
       <Container>
         <h2>List of letters for number: {number}</h2>
         <ListContainer>
-          {wordList.map((item: any, index: any) => (
+          {wordList && wordList.map((item: any, index: any) => (
             <WordListItem key={index} item={item} />
           ))}
         </ListContainer>

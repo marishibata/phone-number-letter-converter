@@ -6,7 +6,7 @@ Full-stack application that converts a given numeric string into a list of corre
 
 - Basic keyboard UI
 - Users can select number to enter into input field
-- Display letters according to number combinations
+- Display letters according to number combinations (still needs fixing on server set-up for this to work)
 - Clear button to clear input so users can re-enter a new set of digits
 
 **Tech Stack**

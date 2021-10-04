@@ -1,15 +1,3 @@
-// alphabet hash map
-const alphabet = {
-  '2': 'abc',
-  '3': 'def',
-  '4': 'ghi',
-  '5': 'jkl',
-  '6': 'mno',
-  '7': 'pqrs',
-  '8': 'tuv',
-  '9': 'wxyz',
-};
-
 
 const numToWord = (digits) => {
 
@@ -19,12 +7,24 @@ const numToWord = (digits) => {
 
   const result = [];
 
+  // alphabet hash map
+  const alphabet = {
+    '2': 'abc',
+    '3': 'def',
+    '4': 'ghi',
+    '5': 'jkl',
+    '6': 'mno',
+    '7': 'pqrs',
+    '8': 'tuv',
+    '9': 'wxyz',
+  };
+
 
   // depth first search recursive helper
   const dfs = (i, digits, slate) => {
     // base case
     if (i === digits.length) {
-      results.push(slate.join(''));
+      result.push(slate.join(''));
       return;
     }
 
@@ -32,7 +32,7 @@ const numToWord = (digits) => {
     // create alpha hash map where numbers will map letter - abc, def, etc.
     let chars = alphabet[digits[i]];
 
-    for (const char in chars) {
+    for (const char of chars) {
       slate.push(char);
       dfs(i + 1, digits, slate);
       slate.pop();

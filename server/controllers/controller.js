@@ -2,8 +2,9 @@ const numToWord = require('../controllers/numToWord');
 
 const getPhoneWords = async (req, res) => {
   try {
-    const params = req.query;
-    const phoneWords = await numToWord(params);
+    const { numbercombination } = req.params;
+    // console.log(params);
+    const phoneWords = numToWord(numbercombination);
     console.log(phoneWords);
     res.status(200).send(phoneWords);
   } catch (err) {
