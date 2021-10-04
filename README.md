@@ -2,11 +2,13 @@
 
 Full-stack application that converts a given numeric string into a list of corresponding words in the style of Phonewords (https://en.wikipedia.org/wiki/Phoneword). 
 
+<img src="https://i.ibb.co/fX3hmQ1/phonewords-converter.png" alt="phonewords-converter" border="0"><br />
+
 **Features**
 
 - Basic keyboard UI
 - Users can select number to enter into input field
-- Display letters according to number combinations (still needs fixing on server set-up for this to work)
+- Display letters according to number combinations
 - Clear button to clear input so users can re-enter a new set of digits
 
 **Tech Stack**
